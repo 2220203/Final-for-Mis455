@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Search meals from around the world and discover easy cooking instructions."
+    />
+    <title>FlavorFind — Meal Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="FlavorFind home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>FlavorFind</span>
+      </a>
+      <p class="header-note">Recipes from around the world</p>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Your next favorite dish is one search away</p>
+          <h1 id="hero-title">Cook something <em>wonderful.</em></h1>
+          <p class="hero-description">
+            Search a meal by name and get delicious ideas with step-by-step
+            cooking instructions.
+          </p>
+
+          <form id="search-form" class="search-form" role="search">
+            <label class="sr-only" for="meal-query">Search for a meal</label>
+            <div class="search-field">
+              <span class="search-icon" aria-hidden="true"></span>
+              <input
+                id="meal-query"
+                name="meal"
+                type="search"
+                placeholder="Try “chicken”, “pasta” or “curry”"
+                autocomplete="off"
+                required
+              />
+              <button type="submit">Find meals</button>
+            </div>
+          </form>
+
+          <div class="quick-searches" aria-label="Popular searches">
+            <span>Popular:</span>
+            <button class="quick-search" type="button" data-query="chicken">Chicken</button>
+            <button class="quick-search" type="button" data-query="pasta">Pasta</button>
+            <button class="quick-search" type="button" data-query="curry">Curry</button>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-plate">
+            <div class="food food-one"></div>
+            <div class="food food-two"></div>
+            <div class="food food-three"></div>
+            <div class="garnish garnish-one"></div>
+            <div class="garnish garnish-two"></div>
+          </div>
+          <div class="floating-card">
+            <span>Fresh inspiration</span>
+            <strong>Every search</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="results-section" class="results-section" aria-labelledby="results-title">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">Recipe collection</p>
+            <h2 id="results-title">Search results</h2>
+          </div>
+          <p id="result-count" class="result-count"></p>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite">
+          <div class="empty-state">
+            <span class="empty-icon" aria-hidden="true">✦</span>
+            <h3>Ready when you are</h3>
+            <p>Type a meal name above to discover recipes.</p>
+          </div>
+        </div>
+
+        <div id="meal-grid" class="meal-grid"></div>
+
+        <div class="show-all-wrap">
+          <button id="show-all" class="show-all" type="button" hidden>
+            Show all meals
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="FlavorFind home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>FlavorFind</span>
+      </a>
+      <p>Find it. Cook it. Love it.</p>
+      <p class="api-credit">
+        Recipe data by
+        <a href="https://www.themealdb.com/" target="_blank" rel="noreferrer">TheMealDB</a>
+      </p>
+    </footer>
+  </body>
+</html>
